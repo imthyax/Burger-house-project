@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Checkout - BurgerHouse</title>
+
+    <link rel="stylesheet" href="burger.css">
+
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+    <!-- ================= CHECKOUT ================= -->
+
+    <h1 class="checkout-title">Checkout</h1>
+
+    <div class="checkout">
+
+        <!-- Customer Details -->
+
+        <h2>Customer Details</h2>
+
+        <label for="name">Name</label>
+
+        <input
+            type="text"
+            id="name"
+            placeholder="Enter your name"
+        >
+
+
+        <label for="phone">Phone</label>
+
+        <input
+            type="tel"
+            id="phone"
+            placeholder="Enter phone number"
+        >
+
+
+        <label for="address">Address</label>
+
+        <textarea
+            id="address"
+            placeholder="Enter your address"
+        ></textarea>
+
+
+        <!-- Total -->
+
+        <div class="checkout-total-box">
+
+            <h2 id="checkout-total">
+                Total: ₹0
+            </h2>
+
+        </div>
+
+
+        <!-- Payment -->
+
+        <h2>Payment Method</h2>
+
+        <div class="payment-option">
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="Cash on Delivery"
+                >
+
+                Cash on Delivery
+
+            </label>
+
+        </div>
+
+
+        <div class="payment-option">
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="UPI"
+                >
+
+                UPI
+
+            </label>
+
+        </div>
+
+
+        <div class="payment-option">
+
+            <label>
+
+                <input
+                    type="radio"
+                    name="payment"
+                    value="Card"
+                >
+
+                Card
+
+            </label>
+
+        </div>
+
+
+        <!-- Place Order -->
+
+        <button
+            class="place-order-btn"
+            onclick="placeOrder()"
+        >
+            Place Order
+        </button>
+
+    </div>
+
+
+</body>
+
+</html>

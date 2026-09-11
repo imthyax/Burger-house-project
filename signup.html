@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Sign Up - BurgerHouse</title>
+
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="signup.css">
+
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Create Account</h1>
+
+        <input
+            type="text"
+            id="new-username"
+            placeholder="Create username"
+        >
+
+        <input
+            type="password"
+            id="new-password"
+            placeholder="Create password"
+        >
+
+        <input
+            type="password"
+            id="confirm-password"
+            placeholder="Confirm password"
+        >
+
+        <p id="signup-error"></p>
+
+        <button onclick="signup()">
+            Sign Up
+        </button>
+
+        <p>
+            Already have an account?
+            <a href="login.html">Login</a>
+        </p>
+
+    </div>
+
+
+    <script>
+
+        function signup() {
+
+            let username =
+                document.getElementById("new-username").value;
+
+            let password =
+                document.getElementById("new-password").value;
+
+            let confirmPassword =
+                document.getElementById("confirm-password").value;
+
+            let error =
+                document.getElementById("signup-error");
+
+
+            if (
+                username === "" ||
+                password === "" ||
+                confirmPassword === ""
+            ) {
+
+                error.innerHTML =
+                    "Please fill all fields.";
+
+                return;
+
+            }
+
+
+            if (password !== confirmPassword) {
+
+                error.innerHTML =
+                    "Passwords do not match.";
+
+                return;
+
+            }
+
+
+           let users = JSON.parse(localStorage.getItem("users")) || [];
+
+users.push({
+    username: username,
+    password: password
+});
+
+localStorage.setItem("users", JSON.stringify(users));
+
+            alert("Account created successfully!");
+
+            window.location.href = "login.html";
+
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Burger House</title>
+
+    <link rel="icon" type="image/png" href="burger-icon.png">
+
+    <link rel="stylesheet" href="burger.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="burger.html">
+            <img src="burger-icon.png" class="brglogo">
+        </a>
+
+        <div>
+            <a href="burger.html">
+                <h2>BurgerHouse</h2>
+            </a>
+
+            <a href="burger.html">
+                <p>Tasty & Fresh</p>
+            </a>
+        </div>
+
+    </div>
+
+
+    <nav>
+        <ul>
+            <li><a href="burger.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="offer.html">Offers</a></li>
+            <li><a href="about.html">About Us</a></li>
+        </ul>
+    </nav>
+
+
+    <div class="right">
+
+        <a href="#" id="cart-icon">
+            <i class="fa-solid fa-cart-shopping"></i>
+            <span id="cart-count">0</span>
+        </a>
+
+        <button onclick="window.location.href='login.html'">
+            Login
+        </button>
+
+    </div>
+
+</header>
+
+
+<!-- ================= CART ================= -->
+
+<div id="cart-box"></div>
+
+<div id="message"></div>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-left">
+
+        <p>— Hot & Delicious —</p>
+
+        <h1>
+            Delicious Burgers
+            <br>
+            Delivered Fast
+        </h1>
+
+        <p>
+            Order your favorite burgers, fries and drinks
+            <br>
+            and get it delivered to your doorstep.
+        </p>
+
+        <button class="odr-btn"
+            onclick="window.location.href='menu.html'">
+            Order Now
+        </button>
+
+        <button class="view-btn"
+            onclick="window.location.href='menu.html'">
+            View Menu
+        </button>
+
+    </div>
+
+
+    <div class="hero-right">
+
+        <img src="burger-image.png" class="bg-img">
+
+    </div>
+
+</section>
+
+
+<!-- ================= CATEGORIES ================= -->
+
+<section class="categories">
+
+    <h2>Categories</h2>
+
+    <div class="categories-container">
+
+        <div class="category">
+            <img src="burger-cat.png" alt="Burger">
+            <h3>Burger</h3>
+        </div>
+
+        <div class="category">
+            <img src="pizza-cat.png" alt="Pizza">
+            <h3>Pizza</h3>
+        </div>
+
+        <div class="category">
+            <img src="fries-cat.png" alt="Fries">
+            <h3>Fries</h3>
+        </div>
+
+        <div class="category">
+            <img src="drinks-cat.png" alt="Drinks">
+            <h3>Drinks</h3>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= POPULAR BURGERS ================= -->
+
+<section class="popular">
+
+    <h2>Popular Burgers</h2>
+
+    <div class="popular-container">
+
+        <div class="popular-burger">
+
+            <img src="crispy-burger.png"
+                 alt="Crispy Chicken Burger">
+
+            <h3>Crispy Chicken Burger</h3>
+
+            <p class="rating">
+                <i class="fa-solid fa-star"></i>
+                4.7
+            </p>
+
+            <p class="price">₹149</p>
+
+            <button
+                class="add-cart"
+                data-name="Crispy Chicken Burger"
+                data-price="149">
+
+                Add to cart
+
+            </button>
+
+        </div>
+
+
+        <div class="popular-burger">
+
+            <img src="cheese-burger.png"
+                 alt="Cheese Burger">
+
+            <h3>Cheese Burger</h3>
+
+            <p class="rating">
+                <i class="fa-solid fa-star"></i>
+                4.6
+            </p>
+
+            <p class="price">₹159</p>
+
+            <button
+                class="add-cart"
+                data-name="Cheese Burger"
+                data-price="159">
+
+                Add to cart
+
+            </button>
+
+        </div>
+
+
+        <div class="popular-burger">
+
+            <img src="double-patty-burger.png"
+                 alt="Double Patty Burger">
+
+            <h3>Double Patty Burger</h3>
+
+            <p class="rating">
+                <i class="fa-solid fa-star"></i>
+                4.8
+            </p>
+
+            <p class="price">₹199</p>
+
+            <button
+                class="add-cart"
+                data-name="Double Patty Burger"
+                data-price="199">
+
+                Add to cart
+
+            </button>
+
+        </div>
+
+
+        <div class="popular-burger">
+
+            <img src="spicy-chicken-burger.png"
+                 alt="Spicy Chicken Burger">
+
+            <h3>Spicy Chicken Burger</h3>
+
+            <p class="rating">
+                <i class="fa-solid fa-star"></i>
+                4.5
+            </p>
+
+            <p class="price">₹129</p>
+
+            <button
+                class="add-cart"
+                data-name="Spicy Chicken Burger"
+                data-price="129">
+
+                Add to cart
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= OFFER ================= -->
+
+<section class="offer">
+
+    <div class="offer-left">
+
+        <h3>🔥 Limited Time Offer</h3>
+
+        <h1>30% OFF</h1>
+
+        <p>
+            Get 30% off on all orders above ₹299.
+        </p>
+
+        <button class="offer-btn"
+            onclick="window.location.href='menu.html'">
+
+            Order Now
+
+        </button>
+
+    </div>
+
+
+    <div class="offer-right">
+
+        <img src="scotter-delivery.png"
+             alt="Special Burger">
+
+    </div>
+
+</section>
+
+
+<!-- ================= HOW IT WORKS ================= -->
+
+<section class="works">
+
+    <h2>How it Works</h2>
+
+    <div class="steps">
+
+        <div class="step">
+
+            <div class="circle">
+
+                <img
+                    src="https://img.icons8.com/color/96/hamburger.png"
+                    alt="Burger">
+
+            </div>
+
+            <h3>1. Choose Food</h3>
+
+            <p>
+                Select your favorite food from the menu.
+            </p>
+
+        </div>
+
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+
+        <div class="step">
+
+            <div class="circle">
+
+                <img src="add-to-cart.png"
+                     alt="Cart">
+
+            </div>
+
+            <h3>2. Add to Cart</h3>
+
+            <p>
+                Add items to your cart and place your order.
+            </p>
+
+        </div>
+
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+
+        <div class="step">
+
+            <div class="circle">
+
+                <img src="free-delivery.png"
+                     alt="Delivery">
+
+            </div>
+
+            <h3>3. Fast Delivery</h3>
+
+            <p>
+                We deliver your food quickly to your doorstep.
+            </p>
+
+        </div>
+
+
+        <i class="fa-solid fa-arrow-right"></i>
+
+
+        <div class="step">
+
+            <div class="circle">
+
+                <img src="smile-face.png"
+                     alt="Enjoy">
+
+            </div>
+
+            <h3>4. Enjoy Food</h3>
+
+            <p>
+                Enjoy your delicious food with your family.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= REVIEWS ================= -->
+
+<section class="reviews">
+
+    <h2>What Our Customer Says</h2>
+
+    <div class="review-container">
+
+        <div class="review-card">
+
+            <img src="boy-1.png" alt="Rahul">
+
+            <div class="review-text">
+
+                <div class="top">
+
+                    <h3>Rahul Sharma</h3>
+
+                    <i class="fa-solid fa-quote-right quote"></i>
+
+                </div>
+
+                <p class="stars">
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+
+                </p>
+
+                <p>
+                    Best burgers in town! Fresh and delicious.
+                    Delivery was super fast.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <img src="girl.png" alt="Priya">
+
+            <div class="review-text">
+
+                <div class="top">
+
+                    <h3>Priya Mehta</h3>
+
+                    <i class="fa-solid fa-quote-right quote"></i>
+
+                </div>
+
+                <p class="stars">
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+
+                </p>
+
+                <p>
+                    Loved the cheese burger and fries.
+                    Will definitely order again.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="review-card">
+
+            <img src="boy2.png" alt="Amit">
+
+            <div class="review-text">
+
+                <div class="top">
+
+                    <h3>Amit Verma</h3>
+
+                    <i class="fa-solid fa-quote-right quote"></i>
+
+                </div>
+
+                <p class="stars">
+
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+
+                </p>
+
+                <p>
+                    Great taste, good packaging and
+                    on-time delivery.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer class="footer">
+
+    <div class="footer-container">
+
+        <div class="footer-box">
+
+            <div class="footer-logo">
+
+                <img src="burger-icon.png"
+                     alt="Burger Logo">
+
+                <div>
+
+                    <h2>
+                        Burger<span>House</span>
+                    </h2>
+
+                    <p>Tasty & Fresh</p>
+
+                </div>
+
+            </div>
+
+            <p class="footer-text">
+
+                We serve the best burgers, fries and drinks.
+                Order now and enjoy fresh, hot and delicious food
+                delivered straight to your doorstep.
+
+            </p>
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="https://www.instagram.com/imthyax__/"
+                   target="_blank">
+
+                    <i class="fa-brands fa-instagram"></i>
+
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="https://youtube.com/@liftwithimthyax?si=VwO6tH9mpPO4R2rz"
+                   target="_blank">
+
+                    <i class="fa-brands fa-youtube"></i>
+
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Quick Links</h3>
+
+            <a href="burger.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="offer.html">Offers</a>
+            <a href="about.html">About Us</a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Our Menu</h3>
+
+            <a href="menu.html">Burger</a>
+            <a href="menu.html">Pizza</a>
+            <a href="menu.html">Fries</a>
+            <a href="menu.html">Drinks</a>
+
+        </div>
+
+
+        <div class="footer-box">
+
+            <h3>Contact Us</h3>
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@burgerhouse.com
+            </p>
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                123 Food Street,
+                <br>
+                Mangalore, Karnataka
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <hr>
+
+    <p class="copyright">
+        © 2026 BurgerHouse. All Rights Reserved.
+    </p>
+
+</footer>
+
+</body>
+</html>

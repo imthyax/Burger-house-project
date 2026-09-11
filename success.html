@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Order Successful</title>
+
+    <link rel="stylesheet" href="burger.css">
+
+</head>
+
+<body>
+
+    <div class="success-box">
+
+       <h1>🎉 Order Placed!</h1>
+
+<p>Your order has been placed successfully.</p>
+
+<p>Thank you for ordering from BurgerHouse!</p>
+<p id="order-total"></p>
+
+<p id="customer-name"></p>
+        <a href="burger.html">
+            <button>Back to Home</button>
+        </a>
+
+    </div>
+
+
+<script>
+
+    let name = localStorage.getItem("customerName");
+
+    document.getElementById("customer-name").innerHTML =
+        "Thank you, " + name + "!";
+
+
+    let total = localStorage.getItem("orderTotal");
+
+    document.getElementById("order-total").innerHTML =
+        "Order Total: ₹" + total;
+
+</script>
+
+</body>
+
+</html>

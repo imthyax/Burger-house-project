@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login - BurgerHouse</title>
+
+    <link rel="stylesheet" href="burger.css">
+    <link rel="stylesheet" href="login.css">
+</head>
+
+<body>
+
+    <div class="login-box">
+
+        <h1>Login</h1>
+
+        <input
+            type="text"
+            id="username"
+            placeholder="Username"
+        >
+
+        <input
+            type="password"
+            id="password"
+            placeholder="Password"
+        >
+
+        <p id="login-error"></p>
+
+        <button onclick="login()">
+            Login
+        </button>
+
+        <p>
+            Don't have an account?
+            <a href="signup.html">Sign Up</a>
+        </p>
+
+    </div>
+
+
+    <script>
+
+        function login() {
+
+            let username =
+                document.getElementById("username").value;
+
+            let password =
+                document.getElementById("password").value;
+
+            let error =
+                document.getElementById("login-error");
+
+
+            if (username === "" || password === "") {
+
+                error.innerHTML =
+                    "Please enter username and password.";
+
+                return;
+
+            }
+
+
+           let users = JSON.parse(localStorage.getItem("users")) || [];
+
+let user = users.find(
+    u => u.username === username && u.password === password
+);
+
+
+            if (user) {
+
+                localStorage.setItem("loggedIn", "true");
+
+                window.location.href = "menu.html";
+
+            } else {
+
+                error.innerHTML =
+                    "Invalid username or password.";
+
+            }
+
+        }
+
+    </script>
+
+</body>
+
+</html>

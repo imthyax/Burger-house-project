@@ -1,0 +1,1162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>BurgerHouse - Offers</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="offer.css">
+    <script src="script.js" defer></script>
+
+</head>
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="burger.html">
+            <img class="brglogo" src="burger-icon.png" alt="BurgerHouse Logo">
+        </a>
+
+        <div>
+            <h2>Burger<span>House</span></h2>
+            <p>Tasty & Fresh</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <ul>
+
+            <li>
+                <a href="burger.html">Home</a>
+            </li>
+
+            <li>
+                <a href="menu.html">Menu</a>
+            </li>
+
+            <li>
+                <a href="offer.html">Offers</a>
+            </li>
+
+            <li>
+                <a href="about.html">About Us</a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+
+    <div class="right">
+
+        <a id="cart-icon">
+    <i class="fa-solid fa-cart-shopping"></i>
+    <span id="cart-count">0</span>
+</a>
+
+<button onclick="window.location.href='menu.html'">
+    Order Now
+</button>
+    </div>
+
+</header>
+<div id="cart-box"></div>
+<div id="message"></div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="offer-hero">
+
+    <div class="offer-left">
+
+        <p class="special">Special Offer</p>
+
+        <h1>
+            BEST DEALS
+            <br>
+            <span>JUST FOR YOU</span>
+        </h1>
+
+        <p>
+            Enjoy exciting offers on your favorite
+            <br>
+            burgers, fries and drinks.
+        </p>
+
+        <a href="menu.html"  class="offer-btn">
+            Order Now
+            <span>→</span>
+        </a>
+
+    </div>
+
+
+    <div class="offer-right">
+
+        <div class="discount-circle">
+
+            <p>UP TO</p>
+
+            <h2>50</h2>
+
+            <span>% OFF</span>
+
+        </div>
+
+        <img src="offer-bag-img.png" alt="Special Offer">
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= TODAY'S OFFERS ================= -->
+
+<section class="today-offer">
+
+    <h2>
+        <span>────</span>
+        Today's Offers
+        <span>────</span>
+    </h2>
+
+
+    <div class="today-container">
+
+
+        <!-- CARD 1 -->
+
+        <div class="today-card">
+
+            <div class="offer-top">
+
+                <div class="offer-text">
+
+                    <h3>
+                        <span>30%</span>
+                        <br>
+                        OFF
+                    </h3>
+
+                    <p>
+                        On orders above ₹299
+                    </p>
+
+                </div>
+
+
+                <div class="offer-image">
+
+                    <img
+                        class="burger-img"
+                        src="half-img2.png"
+                        alt="Burger Offer">
+
+                </div>
+
+            </div>
+
+
+           <button class="code-btn">
+    Use Code: BURGER30
+</button>
+
+<button class="claim-btn" onclick="applyCoupon('BURGER30')">
+    Claim Offer
+</button>
+
+        </div>
+
+
+
+        <!-- CARD 2 -->
+
+        <div class="today-card">
+
+            <div class="offer-top">
+
+                <div class="offer-text">
+
+                    <h3>
+                        BUY 1
+                        <br>
+                        GET 1
+                        <br>
+                        <span>FREE</span>
+                    </h3>
+
+                    <p>
+                        On Chicken Burger
+                    </p>
+
+                </div>
+
+
+                <div class="offer-image">
+
+                    <img
+                        class="burger-img"
+                        src="half-img1.png"
+                        alt="Buy One Get One">
+
+                </div>
+
+            </div>
+
+
+            <button class="code-btn">
+    Use Code: B1G1
+</button>
+
+<button class="claim-btn" onclick="applyCoupon('B1G1')">
+    Claim Offer
+</button>
+
+        </div>
+
+
+
+        <!-- CARD 3 -->
+
+        <div class="today-card">
+
+            <div class="offer-top">
+
+                <div class="offer-text">
+
+                    <h3>
+                        <span>FREE</span>
+                        <br>
+                        MOJITO
+                    </h3>
+
+                    <p>
+                        On orders above ₹499
+                    </p>
+
+                </div>
+
+
+                <div class="offer-image">
+
+                    <img
+                        class="mojito-img"
+                        src="blueberry.png"
+                        alt="Free Mojito">
+
+                </div>
+
+            </div>
+
+
+           <button class="code-btn">
+    Use Code: FREEMOJITO
+</button>
+
+<button class="claim-btn" onclick="applyCoupon('FREEMOJITO')">
+    Claim Offer
+</button>
+
+        </div>
+
+
+
+        <!-- CARD 4 -->
+
+        <div class="today-card">
+
+            <div class="offer-top">
+
+                <div class="offer-text">
+
+                    <h3>
+                        <span>20%</span>
+                        <br>
+                        OFF
+                    </h3>
+
+                    <p>
+                        On First Order
+                    </p>
+
+                </div>
+
+
+                <div class="offer-image">
+
+                    <img
+                        class="bag-img"
+                        src="offer-bag-img.png"
+                        alt="First Order Offer">
+
+                </div>
+
+            </div>
+
+
+           <button class="code-btn">
+    Use Code: NEW20
+</button>
+
+<button class="claim-btn" onclick="applyCoupon('NEW20')">
+    Claim Offer
+</button>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COMBO OFFERS ================= -->
+
+<section class="combo-offer">
+
+    <h2>
+        <span>────</span>
+        COMBO OFFERS
+        <span>────</span>
+    </h2>
+
+
+    <div class="combo-container">
+
+
+        <!-- BURGER COMBO -->
+
+        <div class="combo-box">
+
+            <div class="combo-text">
+
+                <h3>Burger Combo</h3>
+
+                <p>1 Crispy Burger</p>
+                <p>French Fries</p>
+                <p>1 Cold Drink</p>
+
+
+                <div class="combo-price">
+
+                    <span>₹299</span>
+
+                    <del>₹399</del>
+
+                </div>
+
+
+                <span class="save">
+                    SAVE ₹100
+                </span>
+
+
+                <button
+    class="add-cart"
+    data-name="Burger Combo"
+    data-price="299">
+
+    Order Now
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+            </div>
+
+
+            <div class="combo-img">
+
+                <img
+                    src="combo-burger.png"
+                    alt="Burger Combo">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- FAMILY COMBO -->
+
+        <div class="combo-box">
+
+            <div class="combo-text">
+
+                <h3>Family Combo</h3>
+
+                <p>2 Chicken Burgers</p>
+                <p>2 Drinks</p>
+                <p>6pcs Tater Tots</p>
+
+
+                <div class="combo-price">
+
+                    <span>₹699</span>
+
+                    <del>₹899</del>
+
+                </div>
+
+
+                <span class="save">
+                    SAVE ₹200
+                </span>
+
+
+                <button
+    class="add-cart"
+    data-name="Family Combo"
+    data-price="699">
+
+    Order Now
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+            </div>
+
+
+            <div class="combo-img">
+
+                <img
+                    src="family-combo.png"
+                    alt="Family Combo">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- MEGA COMBO -->
+
+        <div class="combo-box">
+
+            <div class="combo-text">
+
+                <h3>Mega Combo</h3>
+
+                <p>2 Beef Burgers</p>
+                <p>2 Chicken Burgers</p>
+                <p>2 Fries</p>
+                <p>3 Drinks</p>
+                <p>8pcs Tater Tots</p>
+
+
+                <div class="combo-price">
+
+                    <span>₹999</span>
+
+                    <del>₹1299</del>
+
+                </div>
+
+
+                <span class="save">
+                    SAVE ₹300
+                </span>
+
+
+                <button
+    class="add-cart"
+    data-name="Mega Combo"
+    data-price="999">
+
+    Order Now
+    <i class="fa-solid fa-cart-shopping"></i>
+
+</button>
+
+            </div>
+
+
+            <div class="combo-img">
+
+                <img
+                    src="mega-combo.png"
+                    alt="Mega Combo">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= COUPON CODES ================= -->
+
+<section class="coupon-section">
+
+    <h2>
+        <span>────</span>
+        COUPON CODES
+        <span>────</span>
+    </h2>
+
+
+    <div class="coupon-container">
+
+
+        <!-- COUPON 1 -->
+
+        <div class="coupon-box">
+
+            <div class="coupon-tag orange">
+
+                <h3>
+                    FREE
+                    <br>
+                    DRINK
+                </h3>
+
+            </div>
+
+
+            <div class="coupon-content">
+
+                <h3>FREECOKE</h3>
+
+                <p>
+                    Free Drink on orders above ₹499
+                </p>
+
+                <button onclick="applyCoupon('FREECOKE')">
+    Copy Code
+</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COUPON 2 -->
+
+        <div class="coupon-box">
+
+            <div class="coupon-tag red">
+
+                <h3>
+                    20%
+                    <br>
+                    OFF
+                </h3>
+
+            </div>
+
+
+            <div class="coupon-content">
+
+                <h3>NEW20</h3>
+
+                <p>
+                    Get 20% OFF on your first order
+                </p>
+
+               <button onclick="applyCoupon('NEW20')">
+    Copy Code
+</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COUPON 3 -->
+
+        <div class="coupon-box">
+
+            <div class="coupon-tag yellow">
+
+                <h3>
+                    ₹100
+                    <br>
+                    OFF
+                </h3>
+
+            </div>
+
+
+            <div class="coupon-content">
+
+                <h3>SAVE100</h3>
+
+                <p>
+                    Get ₹100 OFF on orders above ₹699
+                </p>
+
+               <button onclick="applyCoupon('SAVE100')">
+    Copy Code
+</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- COUPON 4 -->
+
+        <div class="coupon-box">
+
+            <div class="coupon-tag orange">
+
+                <h3>
+                    30%
+                    <br>
+                    OFF
+                </h3>
+
+            </div>
+
+
+            <div class="coupon-content">
+
+                <h3>BURGER30</h3>
+
+                <p>
+                    Get 30% OFF on orders above ₹299
+                </p>
+
+                <button onclick="applyCoupon('BURGER30')">
+    Copy Code
+</button>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= SPECIAL OFFERS ================= -->
+
+<section class="festival-section">
+
+    <h2 class="festival-title">
+
+        <span>────</span>
+        SPECIAL OFFERS
+        <span>────</span>
+
+    </h2>
+
+
+    <div class="festival-container">
+
+
+        <!-- INDEPENDENCE DAY -->
+
+        <div class="festival-box independence-box">
+
+            <div class="festival-content">
+
+                <h3>
+                    🇮🇳 INDEPENDENCE DAY
+                </h3>
+
+                <h2>
+                    15% OFF
+                </h2>
+
+                <p>
+                 Celebrate Independence Day
+                    <br>
+                    with us!
+                </p>
+
+
+                <div class="offer-code">
+
+                    <span>
+                        Use code: INDIA15
+                    </span>
+
+                </div>
+
+
+               <button onclick="applyCoupon('INDIA15')">
+    Order Now
+</button>
+            </div>
+
+
+            <div class="festival-img">
+
+                <img
+                    src="independence-offer.png"
+                    alt="Independence Day Offer">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- WEEKEND SPECIAL -->
+
+        <div class="festival-box weekend-box">
+
+            <div class="festival-content">
+
+                <h3>
+                    WEEKEND SPECIAL
+                </h3>
+
+                <h2>
+                    BUY 2
+                    <br>
+                    GET 1 FREE
+                </h2>
+
+                <p>
+                    On all Burgers
+                </p>
+
+
+                <div class="offer-code">
+
+                    <span>
+                        Use code: WEEKEND
+                    </span>
+
+                </div>
+
+
+                <button onclick="applyCoupon('WEEKEND')">
+    Order Now
+</button>
+
+            </div>
+
+
+            <div class="festival-img">
+
+                <img
+                    src="weekend-special.png"
+                    alt="Weekend Special">
+
+            </div>
+
+        </div>
+
+
+
+        <!-- LIMITED TIME -->
+
+        <div class="festival-box limited-box">
+
+            <div class="festival-content">
+
+                <h3>
+
+                    <i class="fa-solid fa-bolt"></i>
+
+                    LIMITED
+                    <br>
+                    TIME OFFER
+
+                </h3>
+
+
+                <p>Up To</p>
+
+
+                <h2>
+                    50% OFF
+                </h2>
+
+
+                <h4>
+                    ON SELECTED ITEMS
+                </h4>
+
+
+                <p>
+                    Ends In
+                </p>
+
+
+                <div class="timer">
+
+
+                    <div class="time-box">
+
+                        <span>02</span>
+
+                        <small>HRS</small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span>15</span>
+
+                        <small>MIN</small>
+
+                    </div>
+
+
+                    <div class="time-box">
+
+                        <span>30</span>
+
+                        <small>SEC</small>
+
+                    </div>
+
+
+                </div>
+
+
+                <button onclick="window.location.href='menu.html'">
+    Order Now
+</button>
+
+            </div>
+
+
+            <div class="festival-img">
+
+                <img
+                    src="limited-time-offer.png"
+                    alt="Limited Time Offer">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= DELIVERY ================= -->
+
+<section class="delivery">
+
+
+    <div class="delivery-box">
+
+        <div class="delivery-icon">
+            🛵
+        </div>
+
+        <div>
+
+            <h3>
+                FREE DELIVERY
+            </h3>
+
+            <p>
+                On orders above ₹199
+            </p>
+
+            <small>
+                No delivery charges!
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="delivery-box">
+
+        <div class="delivery-icon">
+            ⏱️
+        </div>
+
+        <div>
+
+            <h3>
+                20 MINUTES DELIVERY
+            </h3>
+
+            <p>
+                We deliver your food
+            </p>
+
+            <small>
+                Hot & Fresh!
+            </small>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="delivery-box">
+
+        <div class="delivery-icon">
+            📍
+        </div>
+
+        <div>
+
+            <h3>
+                FREE DELIVERY
+            </h3>
+
+            <p>
+                Within 5 KM radius
+            </p>
+
+            <small>
+                From our outlet
+            </small>
+
+        </div>
+
+    </div>
+
+
+</section>
+
+
+
+<!-- ================= BOTTOM OFFER ================= -->
+
+<section class="bottom-offer">
+
+    <div>
+
+        <h2>
+            Hungry? Don't Miss These Deals!
+        </h2>
+
+        <p>
+            Order your favorite food and enjoy amazing offers today!
+        </p>
+
+    </div>
+
+
+    <button onclick="window.location.href='menu.html'">
+    Order Now →
+</button>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+
+    <div class="footer-container">
+
+
+        <!-- BRAND -->
+
+        <div class="footer-box brand-box">
+
+            <div class="flogo">
+
+                <img
+                    src="burger-icon.png"
+                    alt="BurgerHouse Logo">
+
+                <div>
+
+                    <h2>
+                        Burger<span>House</span>
+                    </h2>
+
+                    <p>
+                        Tasty & Fresh
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <p class="footer-text">
+
+                We serve the best burgers, fries and drinks.
+                Order now and enjoy fresh, hot and delicious
+                food delivered straight to your doorstep.
+
+            </p>
+
+        </div>
+
+
+
+        <!-- QUICK LINKS -->
+
+        <div class="footer-box">
+
+            <h3>
+                Quick Links
+            </h3>
+
+            <a href="burger.html">
+                Home
+            </a>
+
+            <a href="menu.html">
+                Menu
+            </a>
+
+            <a href="offer.html">
+                Offers
+            </a>
+
+            <a href="about.html">
+                About Us
+            </a>
+
+        </div>
+
+
+
+        <!-- MENU -->
+
+        <div class="footer-box">
+
+            <h3>
+                Our Menu
+            </h3>
+
+            <a href="#">
+                Burger
+            </a>
+
+            <a href="#">
+                Pizza
+            </a>
+
+            <a href="#">
+                Fries
+            </a>
+
+            <a href="#">
+                Drinks
+            </a>
+
+        </div>
+
+
+
+        <!-- CONTACT -->
+
+        <div class="footer-box">
+
+            <h3>
+                Contact Us
+            </h3>
+
+
+            <p>
+                <i class="fa-solid fa-phone"></i>
+                +91 98765 43210
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-envelope"></i>
+                info@burgerhouse.com
+            </p>
+
+
+            <p>
+                <i class="fa-solid fa-location-dot"></i>
+                123 Food Street,
+                <br>
+                Mangalore, Karnataka
+            </p>
+
+        </div>
+
+
+
+        <!-- SOCIAL -->
+
+        <div class="footer-box">
+
+            <h3>
+                Follow Us
+            </h3>
+
+
+            <div class="social-icons">
+
+                <a href="#">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+
+                <a href="#">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <hr>
+
+
+    <p class="copyright">
+        © 2026 BurgerHouse. All Rights Reserved.
+    </p>
+
+
+</footer>
+
+
+</body>
+
+</html>

@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="menu.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+      <header>
+        <div class="logo">
+            <a href="burger.html"><img src="burger-icon.png"class=brglogo></a>
+            <div>
+           <a href="burger.html"> <h2>BurgerHome</h2></a>
+            <a href="burger.html"><p>Tasty & Fresh</p></a>
+            </div>
+           
+        </div>
+         
+        <nav >
+            <ul>
+            <li><a href="burger.html">Home</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="offer.html">Offers</a></li>
+            <li><a href="about.html">About us</a></li>
+            </ul>    
+        </nav>
+        <div class="right">
+
+    <a id="cart-icon">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span id="cart-count">0</span>
+    </a>
+
+    <button onclick="window.location.href='login.html'">
+        Login
+    </button>
+
+</div>
+    </header>
+    <div id="cart-box"></div>
+
+<div id="message"></div>
+
+    <section class="menu-hero">
+        <div class="menu-left">
+            <img src="menu-left.png">
+            
+        </div>
+        <div class="menu-text">
+            <h1>OUR MENU</h1>
+
+        </div>
+        <div class="menu-right">
+            <img src="menu-right.png">
+
+        </div>
+    </section>
+
+<section class="menu-category">
+
+    <a href="#burger">🍔 Burger</a>
+
+    <a href="#pizza">🍕 Pizza</a>
+
+    <a href="#fries">🍟 Fries</a>
+
+    <a href="#drinks">🥤 Drinks</a>
+
+</section>
+
+<section id="burger" class="food-section">
+
+    <h2>BURGERS</h2>
+
+    <div class="food-container">
+
+        <div class="food-card">
+
+            <img src="crispy-burger.png" alt="Crispy Chicken Burger">
+
+            <h3>Crispy Chicken Burger</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Crispy Chicken Burger" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="cheese-burger.png" alt="Cheese Burger">
+
+            <h3>Cheese Burger</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.6</span>
+            </div>
+
+            <h4>₹159</h4>
+
+            <button class="add-cart" data-name="Cheese Burger" data-price="159">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="double-patty-burger.png" alt="Double Patty Burger">
+
+            <h3>Double Patty Burger</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹199</h4>
+
+            <button class="add-cart" data-name="Double Patty Burger" data-price="199">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="spicy-chicken-burger.png" alt="Spicy Chicken Burger">
+
+            <h3>Spicy Chicken Burger</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.5</span>
+            </div>
+
+            <h4>₹129</h4>
+
+            <button class="add-cart" data-name="Spicy Chicken Burger" data-price="129">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="egg-burger.png">
+
+            <h3>Egg Burger</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.4</span>
+            </div>
+
+            <h4>₹119</h4>
+
+            <button class="add-cart" data-name="Egg Burger" data-price="119">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="classic-beef-burger.png">
+
+            <h3>Classic Beef Burger</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.9</span>
+            </div>
+
+            <h4>₹229</h4>
+
+            <button class="add-cart" data-name="Classic Beef Burger" data-price="229">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="mushroom-swiss-burger.png">
+
+            <h3>Mushroom Swiss</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹189</h4>
+
+            <button class="add-cart" data-name="Mushroom Swiss" data-price="189">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="bbq-bacon-burger.png">
+
+            <h3>BBQ Bacon</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹209</h4>
+
+            <button class="add-cart" data-name="BBQ Bacon" data-price="209">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="pizza" class="food-section">
+
+    <h2>PIZZA</h2>
+
+    <div class="food-container">
+
+        <div class="food-card">
+
+            <img src="four-cheese-burger.png" alt="Four Cheese">
+
+            <h3>Four Cheese</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Four Cheese" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="pepperoni.png">
+
+            <h3>Pepperoni</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.6</span>
+            </div>
+
+            <h4>₹159</h4>
+
+            <button class="add-cart" data-name="Pepperoni" data-price="159">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="buffalo-chicken-pizza.png">
+
+            <h3>Chicken Pizza</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹199</h4>
+
+            <button class="add-cart" data-name="Chicken Pizza" data-price="199">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="mediterranem-pizza.png">
+
+            <h3>mediterranem</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.5</span>
+            </div>
+
+            <h4>₹129</h4>
+
+            <button class="add-cart" data-name="mediterranem" data-price="129">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="mushroom.png">
+
+            <h3>Mushroom Pizza</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.4</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Mushroom Pizza" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="veggie-pizza.png">
+
+            <h3>Veggie Pizza</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.9</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Veggie Pizza" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="sea-food-pizza.png">
+
+            <h3>Sea Food Pizza</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Sea Food Pizza" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="margherita-pizza.png">
+
+            <h3>Margherita Pizza</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Margherita Pizza" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="fries" class="food-section">
+
+    <h2>FRIES</h2>
+
+    <div class="food-container">
+
+        <div class="food-card">
+
+            <img src="waffle fries.png">
+
+            <h3>Waffle Fries</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Waffle Fries" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="tater tots.png">
+
+            <h3>Tater tots</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.6</span>
+            </div>
+
+            <h4>₹159</h4>
+
+            <button class="add-cart" data-name="Tater tots" data-price="159">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="garlic fries.png">
+
+            <h3>Garlic Fries</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹199</h4>
+
+            <button class="add-cart" data-name="Garlic Fries" data-price="199">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="curly fries.png">
+
+            <h3>Curly Fries</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.5</span>
+            </div>
+
+            <h4>₹129</h4>
+
+            <button class="add-cart" data-name="Curly Fries" data-price="129">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="crinkle-cut-fries.png">
+
+            <h3>Crinkle Cut</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.4</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Crinkle Cut" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="cheese fries.png">
+
+            <h3>Cheese Fries</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.9</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Cheese Fries" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="steak.png">
+
+            <h3>Steak</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="Steak" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="sweet-potato.png">
+
+            <h3>sweet-potato</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹149</h4>
+
+            <button class="add-cart" data-name="sweet-potato" data-price="149">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="drinks" class="food-section">
+
+    <h2>DRINKS</h2>
+
+    <div class="food-container">
+
+        <div class="food-card">
+
+            <img src="strawberry.png">
+
+            <h3>Strawberry Mogitto</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Strawberry Mogitto" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="cucumber.png">
+
+            <h3>Cucumber Mojitto</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.6</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Cucumber Mojitto" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="pinneapple.png">
+
+            <h3>Pinneapple Mojitto</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Pinneapple Mojitto" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="watermelon.png">
+
+            <h3>watermelon Mojitto</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.5</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="watermelon Mojitto" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="lemon.png">
+
+            <h3>Lemon Mojitto</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.4</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Lemon Mojitto" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="kiwi.png">
+
+            <h3>Kiwi Mojito</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.9</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Kiwi Mojito" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="blueberry.png">
+
+            <h3>Blueberry Mojitto</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.7</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Blueberry Mojitto" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+
+        <div class="food-card">
+
+            <img src="orange.png">
+
+            <h3>Orange Mojito</h3>
+
+            <div class="rating">
+                <i class="fa-solid fa-star"></i>
+                <span>4.8</span>
+            </div>
+
+            <h4>₹50</h4>
+
+            <button class="add-cart" data-name="Orange Mojito" data-price="50">
+                <i class="fa-solid fa-cart-shopping"></i> Add to Cart
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

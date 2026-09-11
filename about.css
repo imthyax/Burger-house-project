@@ -1,0 +1,662 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8e7;
+    color: #181818;
+}
+
+
+/* ================= HEADER ================= */
+
+header {
+    height: 85px;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+    position: relative;
+    z-index: 1000;
+}
+
+
+/* ================= LOGO ================= */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo a {
+    text-decoration: none;
+}
+
+.brglogo {
+    width: 65px;
+}
+
+.logo h2 {
+    color: #ffc107;
+    font-size: 22px;
+}
+
+.logo p {
+    color: white;
+    font-size: 13px;
+}
+
+
+/* ================= NAV ================= */
+
+nav ul {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #ffc107;
+}
+
+
+/* ================= RIGHT ================= */
+
+.right {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+
+/* ================= CART ICON ================= */
+
+#cart-icon {
+    position: relative;
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+#cart-icon:hover {
+    color: #ffc107;
+}
+
+
+/* ================= CART COUNT ================= */
+
+#cart-count {
+    position: absolute;
+    top: -10px;
+    right: -12px;
+    width: 20px;
+    height: 20px;
+    background-color: #ff6b00;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+
+/* ================= LOGIN ================= */
+
+.login-btn {
+    background-color: #ff6b00;
+    color: white;
+    text-decoration: none;
+    padding: 10px 22px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+}
+
+.login-btn:hover {
+    background-color: #ffc107;
+    color: #181818;
+}
+
+
+/* ================= CART BOX ================= */
+
+#cart-box {
+    position: fixed;
+
+    top: 90px;
+    right: 30px;
+
+    width: 350px;
+    max-height: 500px;
+
+    overflow-y: auto;
+
+    background-color: white;
+    color: #181818;
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+
+    z-index: 9999;
+
+    display: none;
+}
+
+
+/* ================= CART ITEM ================= */
+
+.cart-item {
+    padding: 15px 0;
+    border-bottom: 1px solid #ddd;
+}
+
+.cart-item h3 {
+    color: #181818;
+    margin-bottom: 8px;
+}
+
+.cart-item p {
+    color: #555;
+    margin-bottom: 8px;
+}
+
+
+/* ================= QUANTITY ================= */
+
+.quantity {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+.quantity button {
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: #ff6b00;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.quantity button:hover {
+    background-color: #ffc107;
+    color: #181818;
+}
+
+
+/* ================= REMOVE ================= */
+
+.cart-item > button {
+    background-color: #181818;
+    color: white;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-item > button:hover {
+    background-color: #ff6b00;
+}
+
+
+/* ================= CART TOTAL ================= */
+
+.cart-total {
+    padding-top: 15px;
+}
+
+.cart-total h3 {
+    color: #181818;
+}
+
+.cart-total button {
+    background-color: #ff6b00;
+    color: white;
+    border: none;
+    padding: 9px 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.cart-total button:hover {
+    background-color: #ffc107;
+    color: #181818;
+}
+
+
+/* ================= EMPTY CART ================= */
+
+.empty-cart {
+    text-align: center;
+    padding: 20px;
+}
+
+.empty-cart h3 {
+    color: #181818;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 70px 80px;
+    gap: 50px;
+}
+
+.hero-left {
+    width: 55%;
+}
+
+.about-title {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.hero-left h1 {
+    font-size: 52px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero-left h1 span {
+    color: #ff6b00;
+}
+
+.about-text {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.learn-more {
+    display: inline-block;
+    background-color: #ff6b00;
+    color: white;
+    text-decoration: none;
+    padding: 15px 35px;
+    border-radius: 8px;
+    font-size: 17px;
+}
+
+.learn-more:hover {
+    background-color: #ffc107;
+    color: #181818;
+}
+
+.hero-right {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+
+.bg-img {
+    width: 500px;
+    max-width: 100%;
+}
+
+
+/* ================= HOW IT WORKS ================= */
+
+.chooser {
+    padding: 70px 50px;
+    background-color: white;
+}
+
+.chooser > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.choose-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.choose {
+    padding: 25px;
+    text-align: center;
+    background-color: #fff8e7;
+    border-radius: 10px;
+}
+
+.image {
+    font-size: 35px;
+    color: #ff6b00;
+    margin-bottom: 15px;
+}
+
+.choose h3 {
+    margin-bottom: 10px;
+}
+
+.choose p {
+    line-height: 1.5;
+    font-size: 14px;
+}
+
+
+/* ================= CUSTOMER ================= */
+
+.customer-reviews {
+    padding: 60px 50px;
+    background-color: #181818;
+}
+
+.customer-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.customer-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.customer-icon {
+    font-size: 30px;
+    color: #ff6b00;
+}
+
+.customer-text h2 {
+    color: #ff6b00;
+    margin-bottom: 5px;
+}
+
+
+/* ================= TEAM ================= */
+
+/* ================= TEAM ================= */
+
+.team-review {
+    padding: 70px 50px;
+    background-color: #fff8e7;
+}
+
+.team-review > h2 {
+    text-align: center;
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.team-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* SEPARATE WHITE CARD FOR EACH PERSON */
+.team {
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+    padding: 25px 20px;
+    min-height: 450px;
+}
+
+/* SMALL ROUND PHOTO */
+.img-team {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.img-team img {
+    width: 130px;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* TEAM CONTENT */
+.team-content {
+    padding: 0;
+}
+
+.team-content h3 {
+    margin-bottom: 10px;
+}
+
+.team-content p {
+    line-height: 1.5;
+    margin-top: 8px;
+}
+
+.team-content span {
+    color: #ff6b00;
+    font-weight: bold;
+}
+
+/* SOCIAL ICONS */
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social i {
+    color: #ff6b00;
+}
+
+.social i:hover {
+    color: #ffc107;
+}
+
+/* ================= FOOTER ================= */
+
+footer {
+    background-color: #181818;
+    color: white;
+    padding: 50px 60px 20px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1.5fr 1fr;
+    gap: 30px;
+}
+
+.flogo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.flogo img {
+    width: 55px;
+}
+
+.flogo h2 {
+    color: white;
+}
+
+.flogo h2 span {
+    color: #ff6b00;
+}
+
+.flogo p {
+    font-size: 12px;
+}
+
+.footer-text {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+.footer-box h3 {
+    color: #ffc107;
+    margin-bottom: 20px;
+}
+
+.footer-box a {
+    display: block;
+    color: #ccc;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.footer-box a:hover {
+    color: #ff6b00;
+}
+
+.footer-box p {
+    color: #ccc;
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+
+.footer-box p i {
+    color: #ff6b00;
+    margin-right: 8px;
+}
+
+
+/* ================= FOOTER SOCIAL ================= */
+
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: white;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #ff6b00;
+}
+
+footer hr {
+    margin: 35px 0 20px;
+    border: none;
+    border-top: 1px solid #444;
+}
+
+.copyright {
+    text-align: center;
+    color: #aaa;
+    font-size: 14px;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+    }
+
+    .hero {
+        padding: 50px 30px;
+    }
+
+    .choose-container,
+    .customer-container,
+    .team-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    header {
+        height: auto;
+        padding: 15px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+    }
+
+    .hero-left h1 {
+        font-size: 35px;
+    }
+
+    .choose-container,
+    .customer-container,
+    .team-container,
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+
+    #cart-box {
+        width: 90%;
+        right: 5%;
+        left: auto;
+        top: 90px;
+        transform: none;
+    }
+
+}
