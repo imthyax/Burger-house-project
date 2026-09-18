@@ -448,14 +448,105 @@ function showCheckoutTotal() {
 
     if (checkoutTotal) {
 
-        checkoutTotal.innerHTML =
-            "Subtotal: ₹" + total +
-            "<br>Discount: ₹" + discount +
-            "<br><strong>Total: ₹" + finalTotal + "</strong>";
+        checkoutTotal.innerHTML = `
+            <div class="summary-line">
+                <span>Subtotal:</span>
+                <span>₹${total}</span>
+            </div>
+            <div class="summary-line discount-line">
+                <span>Discount:</span>
+                <span>- ₹${discount}</span>
+            </div>
+            <div class="summary-line total-line">
+                <span>Total Payable:</span>
+                <span class="total-amount">₹${finalTotal}</span>
+            </div>
+        `;
 
     }
 
+    // Update UPI QR code with dynamic order amount if QR image exists
+    let qrImage = document.getElementById("upi-qr-image");
+    if (qrImage) {
+        let upiId = "7019736315@ybl";
+        let payeeName = encodeURIComponent("BurgerHouse");
+        let upiUrl = `upi://pay?pa=${upiId}&pn=${payeeName}&am=${finalTotal}&cu=INR`;
+        qrImage.src = `https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=${encodeURIComponent(upiUrl)}`;
+    }
+
 }
+
+
+// ================= PAYMENT METHOD HANDLER =================
+
+function onPaymentMethodChange(radio) {
+
+    let allCards = document.querySelectorAll(".payment-option-card");
+    allCards.forEach(function(card) {
+        card.classList.remove("active");
+    });
+
+    if (radio && radio.closest(".payment-option-card")) {
+        radio.closest(".payment-option-card").classList.add("active");
+    }
+
+    let upiBox = document.getElementById("upi-details-box");
+    if (upiBox) {
+        if (radio.value === "UPI") {
+            upiBox.style.display = "block";
+        } else {
+            upiBox.style.display = "none";
+        }
+    }
+
+}
+
+
+// ================= COPY UPI ID =================
+
+function copyUPI() {
+
+    let upiId = "7019736315@ybl";
+    let copyBtn = document.getElementById("copy-btn");
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(upiId).then(function() {
+            showCopySuccess(copyBtn);
+        }).catch(function() {
+            fallbackCopy(upiId, copyBtn);
+        });
+    } else {
+        fallbackCopy(upiId, copyBtn);
+    }
+
+}
+
+function fallbackCopy(text, btn) {
+    let tempInput = document.createElement("input");
+    tempInput.value = text;
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    try {
+        document.execCommand("copy");
+        showCopySuccess(btn);
+    } catch (err) {
+        alert("UPI ID: " + text);
+    }
+    document.body.removeChild(tempInput);
+}
+
+function showCopySuccess(btn) {
+    if (!btn) return;
+    let originalHtml = btn.innerHTML;
+    btn.innerHTML = '<i class="fa-solid fa-check"></i> Copied!';
+    btn.classList.add("copied");
+
+    setTimeout(function() {
+        btn.innerHTML = originalHtml;
+        btn.classList.remove("copied");
+    }, 2000);
+}
+
 
 
 // ================= PLACE ORDER =================

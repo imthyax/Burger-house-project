@@ -2,49 +2,55 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Order Successful</title>
-
+    <title>Order Successful - BurgerHouse</title>
+    <link rel="icon" type="image/png" href="burger-icon.png">
     <link rel="stylesheet" href="burger.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
-<body>
+<body class="login-page">
 
     <div class="success-box">
+        <div style="font-size: 50px; color: #2e7d32; margin-bottom: 10px;">
+            <i class="fa-solid fa-circle-check"></i>
+        </div>
+        <h1 style="color: #2c1810; margin: 0 0 10px;">Order Placed!</h1>
+        <p style="color: #666; font-size: 15px; margin-bottom: 18px;">
+            Your delicious burger order has been confirmed.
+        </p>
 
-       <h1>🎉 Order Placed!</h1>
+        <div style="background: #fff8f0; border: 1.5px solid #ffe0b2; border-radius: 12px; padding: 16px; margin-bottom: 22px; text-align: left;">
+            <p id="customer-name" style="margin: 0 0 8px; font-weight: 600; color: #2c1810;"></p>
+            <p id="order-total" style="margin: 0 0 8px; font-size: 16px; font-weight: 700; color: #ff6b00;"></p>
+            <p id="payment-method-display" style="margin: 0; font-size: 14px; color: #555;"></p>
+        </div>
 
-<p>Your order has been placed successfully.</p>
-
-<p>Thank you for ordering from BurgerHouse!</p>
-<p id="order-total"></p>
-
-<p id="customer-name"></p>
-        <a href="burger.html">
-            <button>Back to Home</button>
+        <a href="burger.html" style="text-decoration: none;">
+            <button><i class="fa-solid fa-house"></i> Back to Home</button>
         </a>
-
     </div>
 
+    <script>
+        let name = localStorage.getItem("customerName") || "Customer";
+        let total = localStorage.getItem("orderTotal") || "0";
+        let paymentMethod = localStorage.getItem("paymentMethod") || "UPI";
 
-<script>
+        document.getElementById("customer-name").innerHTML =
+            `<i class="fa-solid fa-user"></i> Customer: <strong>${name}</strong>`;
 
-    let name = localStorage.getItem("customerName");
+        document.getElementById("order-total").innerHTML =
+            `<i class="fa-solid fa-receipt"></i> Total Paid: ₹${total}`;
 
-    document.getElementById("customer-name").innerHTML =
-        "Thank you, " + name + "!";
-
-
-    let total = localStorage.getItem("orderTotal");
-
-    document.getElementById("order-total").innerHTML =
-        "Order Total: ₹" + total;
-
-</script>
+        if (paymentMethod === "UPI") {
+            document.getElementById("payment-method-display").innerHTML =
+                `<i class="fa-solid fa-mobile-screen-button" style="color:#2e7d32;"></i> Payment: <strong>UPI (7019736315@ybl)</strong>`;
+        } else {
+            document.getElementById("payment-method-display").innerHTML =
+                `<i class="fa-solid fa-wallet"></i> Payment: <strong>${paymentMethod}</strong>`;
+        }
+    </script>
 
 </body>
 

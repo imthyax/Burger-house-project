@@ -2,133 +2,244 @@
 <html lang="en">
 
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>Checkout - BurgerHouse</title>
-
+    <link rel="icon" type="image/png" href="burger-icon.png">
     <link rel="stylesheet" href="burger.css">
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="script.js" defer></script>
-
 </head>
 
-<body>
+<body class="checkout-body">
 
-    <!-- ================= CHECKOUT ================= -->
-
-    <h1 class="checkout-title">Checkout</h1>
-
-    <div class="checkout">
-
-        <!-- Customer Details -->
-
-        <h2>Customer Details</h2>
-
-        <label for="name">Name</label>
-
-        <input
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-        >
-
-
-        <label for="phone">Phone</label>
-
-        <input
-            type="tel"
-            id="phone"
-            placeholder="Enter phone number"
-        >
-
-
-        <label for="address">Address</label>
-
-        <textarea
-            id="address"
-            placeholder="Enter your address"
-        ></textarea>
-
-
-        <!-- Total -->
-
-        <div class="checkout-total-box">
-
-            <h2 id="checkout-total">
-                Total: ₹0
-            </h2>
-
+    <!-- ================= HEADER ================= -->
+    <header>
+        <div class="logo">
+            <a href="burger.html">
+                <img src="burger-icon.png" class="brglogo" alt="BurgerHouse Logo">
+            </a>
+            <div>
+                <a href="burger.html"><h2>BurgerHouse</h2></a>
+                <a href="burger.html"><p>Tasty & Fresh</p></a>
+            </div>
         </div>
 
+        <nav>
+            <ul>
+                <li><a href="burger.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="offer.html">Offers</a></li>
+                <li><a href="about.html">About us</a></li>
+            </ul>
+        </nav>
 
-        <!-- Payment -->
+        <div class="right">
+            <a href="menu.html" class="back-menu-link">
+                <i class="fa-solid fa-arrow-left"></i> Menu
+            </a>
+        </div>
+    </header>
 
-        <h2>Payment Method</h2>
-
-        <div class="payment-option">
-
-            <label>
-
-                <input
-                    type="radio"
-                    name="payment"
-                    value="Cash on Delivery"
-                >
-
-                Cash on Delivery
-
-            </label>
-
+    <!-- ================= CHECKOUT CONTAINER ================= -->
+    <div class="checkout-wrapper">
+        <div class="checkout-header-bar">
+            <a href="menu.html" class="checkout-back-btn">
+                <i class="fa-solid fa-chevron-left"></i> Back to Menu
+            </a>
+            <h1 class="checkout-title"><i class="fa-solid fa-bag-shopping"></i> Checkout</h1>
         </div>
 
+        <div class="checkout">
 
-        <div class="payment-option">
+            <!-- Customer Details -->
+            <div class="checkout-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-user-location"></i> Customer Details
+                </h2>
 
-            <label>
+                <div class="input-group">
+                    <label for="name"><i class="fa-solid fa-user"></i> Full Name</label>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Enter your full name"
+                        required
+                    >
+                </div>
 
-                <input
-                    type="radio"
-                    name="payment"
-                    value="UPI"
-                >
+                <div class="input-group">
+                    <label for="phone"><i class="fa-solid fa-phone"></i> Phone Number</label>
+                    <input
+                        type="tel"
+                        id="phone"
+                        placeholder="Enter 10-digit mobile number"
+                        maxlength="10"
+                        required
+                    >
+                </div>
 
-                UPI
+                <div class="input-group">
+                    <label for="address"><i class="fa-solid fa-location-dot"></i> Delivery Address</label>
+                    <textarea
+                        id="address"
+                        placeholder="House / Flat No., Street, Landmark, Area"
+                        rows="3"
+                        required
+                    ></textarea>
+                </div>
+            </div>
 
-            </label>
+            <!-- Order Summary / Total -->
+            <div class="checkout-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-receipt"></i> Order Summary
+                </h2>
+
+                <div class="checkout-total-box" id="checkout-total">
+                    <div class="summary-line"><span>Subtotal:</span> <span>₹0</span></div>
+                    <div class="summary-line"><span>Discount:</span> <span>₹0</span></div>
+                    <div class="summary-line total-line"><strong>Total:</strong> <strong>₹0</strong></div>
+                </div>
+            </div>
+
+            <!-- Payment Method -->
+            <div class="checkout-section">
+                <h2 class="section-title">
+                    <i class="fa-solid fa-credit-card"></i> Payment Method
+                </h2>
+
+                <div class="payment-methods-list">
+
+                    <!-- UPI Option (Default) -->
+                    <label class="payment-option-card active" id="card-upi" for="pay-upi">
+                        <div class="payment-radio-wrap">
+                            <input
+                                type="radio"
+                                id="pay-upi"
+                                name="payment"
+                                value="UPI"
+                                checked
+                                onchange="onPaymentMethodChange(this)"
+                            >
+                            <span class="custom-radio"></span>
+                        </div>
+                        <div class="payment-icon-wrap upi-bg">
+                            <i class="fa-solid fa-mobile-screen-button"></i>
+                        </div>
+                        <div class="payment-text">
+                            <div class="payment-title-row">
+                                <span class="payment-name">UPI (GPay / PhonePe / Paytm)</span>
+                                <span class="badge-recommended">Default</span>
+                            </div>
+                            <span class="payment-desc">Pay instantly using any UPI App or QR</span>
+                        </div>
+                    </label>
+
+                    <!-- UPI Details Box -->
+                    <div class="upi-details-container" id="upi-details-box">
+                        <div class="upi-header">
+                            <i class="fa-solid fa-shield-check"></i>
+                            <span>Transfer to BurgerHouse UPI</span>
+                        </div>
+
+                        <!-- UPI ID Display with Copy -->
+                        <div class="upi-id-box">
+                            <div class="upi-id-left">
+                                <span class="upi-id-label">UPI ID</span>
+                                <span class="upi-id-val" id="upi-val">7019736315@ybl</span>
+                            </div>
+                            <button type="button" class="copy-upi-btn" id="copy-btn" onclick="copyUPI()">
+                                <i class="fa-regular fa-copy"></i> Copy
+                            </button>
+                        </div>
+
+                        <!-- QR Code Area -->
+                        <div class="upi-qr-section">
+                            <div class="qr-box">
+                                <img
+                                    id="upi-qr-image"
+                                    src="https://api.qrserver.com/v1/create-qr-code/?size=160x160&data=upi://pay?pa=7019736315@ybl%26pn=BurgerHouse%26cu=INR"
+                                    alt="UPI QR Code"
+                                >
+                            </div>
+                            <div class="qr-info">
+                                <p class="qr-title">Scan QR code with any UPI App</p>
+                                <div class="upi-apps-row">
+                                    <span class="app-tag gpay">Google Pay</span>
+                                    <span class="app-tag phonepe">PhonePe</span>
+                                    <span class="app-tag paytm">Paytm</span>
+                                    <span class="app-tag bhim">BHIM</span>
+                                </div>
+                                <p class="qr-instruction"><i class="fa-solid fa-circle-check"></i> Instant verification upon order confirmation</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Cash on Delivery Option -->
+                    <label class="payment-option-card" id="card-cod" for="pay-cod">
+                        <div class="payment-radio-wrap">
+                            <input
+                                type="radio"
+                                id="pay-cod"
+                                name="payment"
+                                value="Cash on Delivery"
+                                onchange="onPaymentMethodChange(this)"
+                            >
+                            <span class="custom-radio"></span>
+                        </div>
+                        <div class="payment-icon-wrap cod-bg">
+                            <i class="fa-solid fa-money-bill-wave"></i>
+                        </div>
+                        <div class="payment-text">
+                            <div class="payment-title-row">
+                                <span class="payment-name">Cash on Delivery</span>
+                            </div>
+                            <span class="payment-desc">Pay with cash when food arrives</span>
+                        </div>
+                    </label>
+
+                    <!-- Card Option -->
+                    <label class="payment-option-card" id="card-card" for="pay-card">
+                        <div class="payment-radio-wrap">
+                            <input
+                                type="radio"
+                                id="pay-card"
+                                name="payment"
+                                value="Card"
+                                onchange="onPaymentMethodChange(this)"
+                            >
+                            <span class="custom-radio"></span>
+                        </div>
+                        <div class="payment-icon-wrap card-bg">
+                            <i class="fa-solid fa-credit-card"></i>
+                        </div>
+                        <div class="payment-text">
+                            <div class="payment-title-row">
+                                <span class="payment-name">Credit / Debit Card</span>
+                            </div>
+                            <span class="payment-desc">Visa, MasterCard, RuPay</span>
+                        </div>
+                    </label>
+
+                </div>
+            </div>
+
+            <!-- Place Order Button -->
+            <button
+                class="place-order-btn"
+                id="place-order-btn"
+                onclick="placeOrder()"
+            >
+                <i class="fa-solid fa-lock"></i> Place Order
+            </button>
+
+            <div class="security-badge">
+                <i class="fa-solid fa-shield-halved"></i> 100% Safe & Secure Order Guarantee
+            </div>
 
         </div>
-
-
-        <div class="payment-option">
-
-            <label>
-
-                <input
-                    type="radio"
-                    name="payment"
-                    value="Card"
-                >
-
-                Card
-
-            </label>
-
-        </div>
-
-
-        <!-- Place Order -->
-
-        <button
-            class="place-order-btn"
-            onclick="placeOrder()"
-        >
-            Place Order
-        </button>
-
     </div>
-
 
 </body>
 
